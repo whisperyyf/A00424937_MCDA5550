@@ -18,7 +18,6 @@ public class BMIListAdapter extends ArrayAdapter<BMIResult> {
 
     @Override
     public View getView(int position, View convertView, ViewGroup parent){
-        //  System.out.println("BMIResults  empty  " +BMIResults.is);
         System.out.println("position is  " +position);
         BMIResult BMIresult = getItem(position);
         if(convertView == null)  {convertView = LayoutInflater.from(getContext()).inflate(R.layout.layout, parent, false);}

@@ -37,16 +37,13 @@ class InClassDatabaseHelper extends SQLiteOpenHelper {
 
         Date today = new Date();
         ContentValues personValues = new ContentValues();
-        personValues.put("NAME","Waleed Moursy");
-        personValues.put("EMAIL","Waleed.Moursy@SMU.CA");
+        personValues.put("NAME","Yifan Yin ");
+        personValues.put("EMAIL","yifan.yin@smu.ca");
         personValues.put("PASSWORD","Super Secret");
-        personValues.put("HEALTH_CARD_NUMB","1234");
-        personValues.put("DOB", "5/11/2018");
+        personValues.put("HEALTH_CARD_NUMB","123456");
+        personValues.put("DOB", "12/12/1995");
 
         //     db.insert(TABLE_NAME,null,personValues);
-
-
-
     }
 
     public void StoreBMIRecord(double height,double weight, double bmi, String date){

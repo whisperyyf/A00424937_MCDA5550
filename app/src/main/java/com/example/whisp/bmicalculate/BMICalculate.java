@@ -34,7 +34,6 @@ public class BMICalculate extends AppCompatActivity {
 
         EditText recorddate = (EditText) findViewById(R.id.recordDate);
 
-        // set calendar date and update editDate
 
         date = new DatePickerDialog.OnDateSetListener(){
 
@@ -47,7 +46,6 @@ public class BMICalculate extends AppCompatActivity {
                 recordDateCalendar.set(Calendar.DAY_OF_MONTH, dayOfMonth);
                 updateDate();
             } };
-        // onclick - popup datepicker
         recorddate.setOnClickListener(new View.OnClickListener() {
 
             @Override
@@ -147,8 +145,6 @@ public class BMICalculate extends AppCompatActivity {
             System.out.println("Here is the BMI " + Calc);
             EditText result = (EditText) findViewById(R.id.txtBMI);
 
-            // new DecimalFormat("$#.00").format(Calc);
-
             result.setText(String.format("Value of BMI: %.2f", Calc));
 
 
@@ -156,29 +152,6 @@ public class BMICalculate extends AppCompatActivity {
             SQLiteDatabase db = helper.getWritableDatabase();
             helper.StoreBMIRecord(heightAsint, weightAsInt, Calc, recordDateValue);
 
-
-            TextView Suggestion = (TextView) findViewById(R.id.textSuggestion);
-            if (Calc < 18.5) {
-                Suggestion.setText("your BMI is considered underweight. Consult Doctor!");
-                Suggestion.setTextColor(Color.RED);
-                Suggestion.setBackgroundColor(Color.BLACK);
-                Suggestion.setTextSize(14);
-            } else if (Calc < 24.9) {
-                Suggestion.setText("your BMI is considered Healthy. Good job!");
-                Suggestion.setTextColor(Color.GREEN);
-                Suggestion.setBackgroundColor(Color.BLACK);
-                Suggestion.setTextSize(14);
-            } else if (Calc < 29.9) {
-                Suggestion.setText("your BMI is considered overweight. Please exercise!");
-                Suggestion.setTextColor(Color.YELLOW);
-                Suggestion.setBackgroundColor(Color.BLACK);
-                Suggestion.setTextSize(14);
-            } else {
-                Suggestion.setText("your BMI is considered obese. Consult Doctor!");
-                Suggestion.setTextColor(Color.RED);
-                Suggestion.setBackgroundColor(Color.BLACK);
-                Suggestion.setTextSize(14);
-            }
         }else {
             Toast.makeText(this, "Invalid Data!", Toast.LENGTH_SHORT).show();}
 
@@ -189,11 +162,5 @@ public class BMICalculate extends AppCompatActivity {
         dob.setError(null);
         dob.setText(sdf.format(recordDateCalendar.getTime()));
     }
-
-    public void  clickMenuPage(View view) {
-        Intent intent = new Intent(this,Menu.class);
-        startActivity(intent);
-    }
-
 
 }

@@ -63,26 +63,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/calculatebtn" />
 
-    <TextView
-        android:id="@+id/textSuggestion"
-        android:layout_width="0dp"
-        android:layout_height="40dp"
-        android:layout_marginBottom="37dp"
-        android:layout_marginTop="46dp"
-        app:layout_constraintBottom_toBottomOf="@+id/btnGotoMenu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="@+id/txtBMI" />
-
-    <Button
-        android:id="@+id/btnGotoMenu"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="29dp"
-        android:onClick="clickMenuPage"
-        android:text="Return To Menu"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtBMI" />
 </android.support.constraint.ConstraintLayout>

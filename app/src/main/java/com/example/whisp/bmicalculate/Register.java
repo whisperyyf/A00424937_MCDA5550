@@ -150,7 +150,7 @@ public class Register extends AppCompatActivity {
             password.setError("Password is empty!");
             invalidData = true;     }
 
-        if (passwordValue.length() > 0  && passwordValue.length() < 4 ) {
+        if (passwordValue.length() > 0  && passwordValue.length() < 6 ) {
             password.setError("Password is too short!");
             invalidData = true;     }
 

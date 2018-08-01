@@ -18,10 +18,6 @@ public class Menu extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void  clickLogout(View view) {
-        Intent intent = new Intent(this,MainActivity.class);
-        startActivity(intent);
-    }
 
     public void  clickCalcBMI(View view) {
         Intent intent = new Intent(this,BMICalculate.class);

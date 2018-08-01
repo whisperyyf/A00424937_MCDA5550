@@ -39,16 +39,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/btnCalcBMI" />
 
-    <Button
-        android:id="@+id/btnlogOut"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:onClick="clickLogout"
-        android:text="LogOut"
-        android:visibility="invisible"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btnBMIRecordlist"
-        tools:text="Log Out" />
 </android.support.constraint.ConstraintLayout>

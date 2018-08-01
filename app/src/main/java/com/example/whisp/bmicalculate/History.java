@@ -60,24 +60,4 @@ public class History extends AppCompatActivity {
 
     }
 
-    //Add to Activity to do something on click
-
-
-    public void  clickDeleteRecords(View view) {
-
-        InClassDatabaseHelper helper = new InClassDatabaseHelper(this);
-        SQLiteDatabase db = helper.getWritableDatabase();
-        db.execSQL("delete from "+ Tbl_BMIRecords);
-
-        Intent intent = new Intent(this,History.class);
-        startActivity(intent);
-
-        Toast.makeText(this, "Records deleted", Toast.LENGTH_SHORT).show();
-    }
-
-    public void  clickReturnToMenu(View view) {
-        Intent intent = new Intent(this,Menu.class);
-        startActivity(intent);
-    }
-
 }

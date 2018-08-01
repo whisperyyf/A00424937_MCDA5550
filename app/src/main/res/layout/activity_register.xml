@@ -62,7 +62,7 @@
         android:layout_marginTop="38dp"
         android:digits="abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"
         android:ems="10"
-        android:hint="Password ( more than 4 )"
+        android:hint="Password ( more than 6 )"
         android:inputType="textPassword"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
